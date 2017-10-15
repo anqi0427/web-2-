@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1-4-1</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		.tab{
+				width:400px;
+				height:500px;
+				margin:0px auto;
+			}
+		.butt{
+				width:70px;
+				height:70px;
+				font-size:20px;
+			}
+	</style>
+	<script type="text/javascript">
+		var num = 0;
+		var str = "";
+		function showData(num){
+			str += document.getElementById(num).value;
+			document.getElementById("result").innerHTML=str;
+		}
+		function calculate(){
+			document.getElementById("result").innerHTML = '';
+				var resultNum=eval(str);
+				resultNum += '';
+				if(resultNum.indexOf(".")>0)
+				{
+					var a=resultNum.indexOf(".");
+					resultNum=resultNum+'00';
+					resultNum=resultNum.substr(0,a+3);
+				}
+				document.getElementById("result").innerHTML = resultNum;
+				str=resultNum;
+		}
+		function clear1(){
+				document.getElementById("result").innerHTML = 0;
+				str="";
+			}
+	</script>
+</head>
+<body>
+	<table class="tab" border="2" width="400px" height="500px" cellpadding="10px">
+		<tr>
+			<td colspan="3" id="result">0</td>
+			<td>
+				<input type="button" id="C" class="butt" value="C" 
+				onclick="clear1()">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="1" class="butt" value="1" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="2" class="butt" value="2" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="3" class="butt" value="3" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="+" class="butt" value="+" 
+				onclick="showData(this.id);">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="4" class="butt" value="4" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="5" class="butt" value="5" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="6" class="butt" value="6" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="-" class="butt" value="-" 
+				onclick="showData(this.id);">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="7" class="butt" value="7" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="8" class="butt" value="8" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="9" class="butt" value="9" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="*" class="butt" value="*" 
+				onclick="showData(this.id);">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="0" class="butt" value="0" 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="." class="butt" value="." 
+				onclick="showData(this.id);">
+			</td>
+			<td>
+				<input type="button" id="=" class="butt" value="=" 
+				onclick="calculate();">
+			</td>
+			<td>
+				<input type="button" id="/" class="butt" value="/" 
+				onclick="showData(this.id);">
+			</td>
+		</tr>		
+	</table>
+</body>
+</html>
