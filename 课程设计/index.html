@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		body{
+			background-image: url("images/bodybg.jpg");
+			background-repeat: repeat-y;
+			font-size: 12px;
+			font-family: "Trebuchet MS";
+		}
+		#header{
+			height: 130px;
+
+		}
+		#banner{
+			height: 410px;
+			background-color: white;
+			opacity: 0.7;
+		}
+		#header #banner img{
+			opacity: 0.8;
+			margin-left: 200px;
+			margin-top: 69px;
+			position: relative;
+			top: -74.3px;
+		}
+		#nav{
+			height: 200px;
+			background-color: #24292c;
+			padding-left: 200px;
+			padding-top: 50px;
+		}
+		#nav_content{
+			width: 600px;
+			height:100px;
+			float: right;
+			color: white;
+			margin-right: 300px;
+			margin-top: 20px;
+		}
+		#nav_content ul li{
+			list-style: none;
+			float: left;
+			font-size: 20px;
+			font-family: "Trebuchet MS";
+			padding-top: 30px;
+
+		}
+		#nav_content a:link,#nav_content a:visited{
+			display:block;
+			width:80px;
+			color: white;
+			text-align:center;
+			text-decoration:none;
+		}
+		#nav_content a:hover{
+			text-decoration: underline;
+			color: white;
+
+		}
+		#nav_content ul{
+			list-style: none;
+		}
+		#nav_content li {
+				float: left; 
+				width: 80px; 
+			}					
+		#nav_content li ul li {
+			float: left;
+			list-style-type: none;
+			padding-top: 10px;
+			padding-left:0px;
+		}
+		#nav_content li ul{
+			float: left;
+			list-style-type: none;
+			padding-top: 10px;
+			padding-left:0px;
+		}
+		#nav_content li ul li a{
+			font-size: 15px;
+			font-family: "Trebuchet MS";
+		}
+		#nav_content li ul li a:hover{
+			background:grey;
+			text-decoration: none;
+
+		}
+
+		#nav_content li ul{
+		display:none;
+		}
+		#nav_content li.subMenuShow ul{
+				display:block;
+			}
+			
+		#header #nav #nav_search{
+			width:180px;
+			float: right;
+			position: relative;
+			top: -53px;
+			left: -130px;
+		}
+		#header #nav #nav_search #left{
+			width: 100px;
+			border-radius: 5px;
+		}
+		#header #nav #nav_search #right{
+			color: #8c96a0;
+			text-shadow:1px 1px 1px #fff;
+			border:1px solid #dce1e6;
+			background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+			background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+			background: linear-gradient(top,#f2f3f7,#e4e8ec);
+			border-radius: 5px;
+
+		}
+		#header #nav #denglu{
+			float: right;
+			margin: 0px;
+			position: relative;
+			left: 100px;
+			top: -85px;
+		}
+		#header #nav #denglu a{
+			text-decoration: none;
+			color: #e0e0e0;
+		}
+		#header #nav #denglu ul li{
+			list-style: none;
+			font-size: 15px;
+			font-family: "Trebuchet MS";
+			padding: 0px;
+			color: white;
+			line-height: 1.8em;
+
+		}
+		#content {
+			    height: 450px;
+			    margin-top: 650px;
+			    margin-left: 70px;
+		}
+		#content a{
+			text-decoration: none;
+			padding:50px;
+		}
+		h1{
+			padding-top: 20px;
+			text-align: center;
+			color: #666;
+		}
+		span{
+			text-align: center;
+			color: #666;
+		}
+		#footer{
+    	padding-left: 350px;
+    	height: 105px;
+        color:white;
+    	background-color: #24292c;
+    	background-repeat: no-repeat;
+	    }
+	    #footer ul li{
+	    	display: inline-block;
+	    	list-style: none;
+	    }
+	    #footer ul li a{
+	    	text-decoration: none;
+	        color:white;
+	    }
+
+
+		
+	#picScroll
+	{
+		background-color: white;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 800px;
+		height:250px;
+		margin:0 auto;
+		padding : 30px;
+	}
+	</style> 
+	<script type="text/javascript">
+			window.onload = function(){
+			var liNodes = document.getElementsByTagName("li");
+			for (var i=0; i<liNodes.length; i++)
+			{
+				liNodes[i].onmouseover = function(){
+					this.className = "subMenuShow";
+				}
+				liNodes[i].onmouseout = function(){
+					this.className = "";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="header">
+		
+		<div id="nav">
+			<img src="images/logo1.jpg" width="125px" >
+			<div id="nav_content">
+				<ul>
+					<li><a href="#">首页</a>
+						<ul>
+							<li><a href="#">主页介绍</a></li>
+							<li><a href="#">主页介绍</a></li>
+							<li><a href="#">主页介绍</a></li>
+						</ul>
+					</li>
+					<li><a href="#">早餐</a>
+						<ul>
+							<li><a href="#">早餐种类</a></li>
+							<li><a href="#">早餐做法</a></li>
+							<li><a href="#">晒晒成果</a></li>
+						</ul>
+					</li>
+					<li><a href="#">午餐</a>
+						<ul>
+							<li><a href="#">午餐种类</a></li>
+							<li><a href="#">午餐做法</a></li>
+							<li><a href="#">晒晒成果</a></li>
+						</ul>
+					</li>
+					<li><a href="#">晚餐</a>
+						<ul>
+							<li><a href="#">晚餐种类</a></li>
+							<li><a href="#">晚餐做法</a></li>
+							<li><a href="#">晒晒成果</a></li>
+						</ul>
+					</li>
+					<li><a href="#">甜品</a>
+						<ul>
+							<li><a href="#">甜品种类</a></li>
+							<li><a href="#">甜品做法</a></li>
+							<li><a href="#">晒晒成果</a></li>
+						</ul>
+					</li>
+					<li><a href="#">水果</a>
+						<ul>
+							<li><a href="#">水果种类</a></li>
+							<li><a href="#">水果新吃法</a></li>
+							<li><a href="#">晒晒成果</a></li>
+						</ul>
+					</li>
+					<li><a href="#">饮品</a>
+						<ul>
+							<li><a href="#">饮品种类</a></li>
+							<li><a href="#">饮品自制</a></li>
+							<li><a href="#">晒晒成果</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="nav_search">
+				<input type="text" id="left"/>
+				<input type="button" name="search" value="搜索" id="right"/>
+			</div>
+			<div id="denglu">
+				<ul>
+					<li><a href="#">登录</a></li>
+					<li><a href="zhuce.html">注 册</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="banner">
+			<img src="images/banner.jpg">
+		</div>
+	</div>
+	<div id="content">
+		
+		<div id="picScroll" onmouseover="clearSrco();"
+	onmouseout="t=setInterval(changeToleft,10);">
+		<span id="picScroll1">
+			<a href="content.html">
+			<img src="images/one.jpg" />
+			</a>
+			<a href="content.html">
+			<img src="images/two.png" />
+			</a>
+			<a href="content.html"><i
+			mg src="images/three.jpg" />
+			</a>
+			<a href="content.html">
+			<img src="images/four.jpg" />
+			</a>
+			<a href="content.html">
+			<img src="images/five.jpg" />
+			</a>
+			<a href="content.html">
+			<img src="images/six.jpg" />
+			</a>
+		</span>
+        <span id="picScroll2">
+			<a href="content.html">
+			<img src="images/one.jpg" />
+			</a>
+			<a href="content.html">
+			<img src="images/two.png" />
+			</a>
+			<a href="content.html"><i
+			mg src="images/three.jpg" />
+			</a>
+			<a href="content.html">
+			<img src="images/four.jpg" />
+			</a>
+			<a href="content.html">
+			<img src="images/five.jpg" />
+			</a>
+			<a href="content.html">
+			<img src="images/six.jpg" />
+			</a>
+		</span>
+		
+ 	</div> 
+<script type="text/javascript">
+var srco=0
+function changeToleft()
+{
+	if(srco>picScroll1.offsetWidth)srco=0;
+	srco=srco+1;
+	document.getElementById('picScroll').scrollLeft=srco;
+};
+var t=setInterval(changeToleft,20);
+function clearSrco(){
+    clearInterval(t);
+}
+</script>
+	</div>
+	<div id="footer">
+     <ul>
+          <li><a href="">电子信箱</a>|</li>
+          <li><a href="">设为首页</a>|</li>
+          <li><a href="">在线调查</a>|</li>
+          <li><a href="">加入收藏</a>|</li>
+          <li><a href="">网站地图</a>|</li>
+          <li><a href="">关于我们</a></li>
+      </ul>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright@2013-2014http://www.***.com All Rights Reserved <br/><br/>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一切解释权归AQ大人所有&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网站备案:冀ICP备00000000号
+     </div> 
+
+</body>
+</html>
